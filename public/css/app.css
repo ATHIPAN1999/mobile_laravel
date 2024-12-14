@@ -1,0 +1,234 @@
+
+
+                    /* HEADER STYLES START*/
+    .header_content{
+        /* border: 0px solid black; */
+        height:60px;
+
+    }
+
+    .brand-name{
+        /* border: 0px solid black; */
+        text-decoration:none;
+        color:black;
+        font-size:20px;
+    }
+
+    .brand-name span{
+        font-weight:bold;
+        color:blueviolet;
+    }
+               /* MENU BUTTON STYLE START */
+    .toogle_css{
+        width:100%;
+        display: block;
+        position: absolute;
+        top: 28px;
+        left: 0px;
+        background-color:rgb(235 234 237);
+        font-size: 16px;
+    }
+
+    .navigation-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 0px solid black;
+        margin: revert;
+    }
+    .navigation-ul a{
+        text-decoration: none;
+        color: black;
+        padding: 17px;
+        border: 0px solid black;     
+    }
+    .navigation-ul li:hover > a:first-of-type {
+        border-bottom: 3px solid blueviolet;
+        color: blueviolet;
+    }
+
+    .navigation-ul li{
+            /* border: 0px solid green; */
+        list-style: none;
+        padding: 2px;
+    }
+              /* NAVIGATIONS STYLE END */
+
+
+    
+
+
+                /* STYLES FOR ALL NAVIGATION HOVER CONTENT DEFAULT HIDE START*/
+    .service_nav_hover_content,.category_nav_hover_content{
+        display: none;   
+
+        /* display: flex;
+        flex-direction:column;
+        justify-content:space-evenly; 
+        align-items: center; */
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background-color:rgb(235 234 237);
+        padding:10px;
+        width:100%;
+        outline: 1px solid #ccc;
+    }
+                /* STYLES FOR ALL NAVIGATION HOVER CONTENT DEFAULT HIDE END*/
+
+
+                        /* CATEGORY NAVIGATION START*/
+     /* Show content while hover the category navigation*/
+    .category_nav_hover_content_sub{
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+       /* border-right:0px solid blueviolet; */
+    }
+   
+    .category_nav_hover_content_sub a{
+        text-decoration: none;
+        padding: 3px;
+        color:blueviolet;
+    }
+    .category_nav_hover_content_sub a:hover{
+        color:#0000FF;
+    }
+    .category-nav:hover .category_nav_hover_content{
+        display: flex;
+        justify-content:center; 
+        align-items: center;
+        gap:20px;
+    }
+                        /* CATEGORY NAVIGATION START*/
+
+.brand_nav_hover_content{
+     /* display: flex;
+        flex-direction:column;
+        justify-content:space-evenly; 
+        align-items: center; */
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background-color:rgb(235 234 237);
+        padding:10px;
+        width:100%;
+        outline: 1px solid #ccc;
+}
+    .brand_nav_hover_content_sub{
+        display: flex;
+        justify-content: space-evenly;
+        row-gap: 20px;
+
+    }
+                        /* SERVICE NAVIGATION START*/
+     /* Show content while hover the service navigation*/
+    .service-nav:hover .service_nav_hover_content{
+        display: flex;
+        flex-direction:column;
+        justify-content:space-evenly; 
+        align-items: center;
+    }
+    .service_nav_hover_content_sub{
+        color: blueviolet;                   
+        gap: 70px;
+    }
+    .service_nav_hover_content_sub img{
+        margin: auto;
+        width: 150px; 
+        height:150px;
+        border-radius:50%;
+        filter: drop-shadow(8px 8px 10px gray)
+    }
+    .service_nav_hover_content_sub div img:hover{
+         /* Example: make the image slightly larger */
+        /* transform: scale(1.1);  */
+         /* Smooth transition for image scale */
+        /* transition: transform 0.3s ease; */
+         /* Scale and rotate the image */
+        transform: scale(1.1) rotate(5deg);
+         /* Brighten the image */
+        filter: brightness(1.2); 
+        transition: transform 0.3s ease; 
+         /* outline: 1px solid blueviolet; */
+    }
+    .service_nav_hover_content_sub div:hover p{
+        transition: all 0.3s ease; 
+    }
+    .service_nav_hover_content_sub p{
+        text-align:center;
+        margin-top:10px;
+        padding: 5px;
+    }
+    .service_nav_hover_content button{
+        background: blueviolet;
+        color:white;
+    }
+    .service_nav_hover_content button:hover{
+        background: rgb(157, 80, 230);
+    }
+                /*SERVICE NAVIGATION END*/
+
+
+              /* MEDIA QUERY STYLE START */
+@media (max-width: 991.98px) { 
+                /* STYLES FOR HEADER NAVIGATION AND BUTTONS START */
+    .toogle_button{
+        visibility: visible !important; 
+        position: relative !important; 
+        color: black;
+    }
+    .navigation-ul{
+        display: none;
+        /*visibility: hidden !important;*/
+    }
+    .navigation-ul li{
+      padding: 6px;
+        /*visibility: hidden !important;*/
+    }
+    .navigation-ul li:hover > a:first-of-type {
+        border-bottom:unset;
+    }
+    .header-icons{
+        gap:16px;
+    }
+    .service-nav:hover .service_nav_hover_content{
+        display: none;
+    }
+    .category-nav:hover .category_nav_hover_content{
+        display: none;
+    }
+                /* STYLES FOR HEADER NAVIGATION AND BUTTONS END */
+
+}
+
+@media (max-width: 1199.98px){ 
+                /* STYLE FOR HIDE THE PARTICULAR DIV WITHIN THE SERVICE NAVIGARION HOVER CONTENT START */
+      .service_nav_hover_content_sub > div:nth-child(5),
+      .service_nav_hover_content_sub > div:nth-child(4) {
+        display: none;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        visibility: hidden;
+        border: 2px solid black;
+    }
+                /* STYLE FOR HIDE THE PARTICULAR DIV WITHIN THE SERVICE NAVIGARION HOVER CONTENT END */
+}
+
+@media (max-width: 1599.98px) { 
+                /* STYLE FOR HIDE THE PARTICULAR DIV WITHIN THE SERVICE NAVIGARION HOVER CONTENT START */
+      .service_nav_hover_content_sub > div:nth-child(5) {
+        display: none;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        visibility: hidden;
+        border: 2px solid black;
+    }
+               /* STYLE FOR HIDE THE PARTICULAR DIV WITHIN THE SERVICE NAVIGARION HOVER CONTENT END */
+}
+
+            /* MEDIA QUERY STYLE END */
+
+                     /* HEADER STYLES END*/
